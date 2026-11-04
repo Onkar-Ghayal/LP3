@@ -1,0 +1,128 @@
+
+// SPDX-License-Identifier: MIT
+// Specifies the license of this smart contract.
+
+pragma solidity ^0.8.20;
+// Specifies the Solidity compiler version.
+// ^0.8.20 means version 0.8.20 or compatible newer versions below 0.9.0.
+
+contract StudentData {
+    // A contract is similar to a class in C++.
+    // StudentData is the name of our smart contract.
+
+    // STRUCT:
+    // A struct is used to group different variables together.
+    // Here, we store all details of one student in a single structure.
+
+    struct Student {
+        uint rollNo;    // Stores the student's roll number.
+        string name;    // Stores the student's name.
+        uint age;       // Stores the student's age.
+        uint marks;     // Stores the student's marks.
+    }
+
+    // ARRAY:
+    // Student[] creates an array that can store multiple Student records.
+    // public allows anyone to read individual array elements.
+    // Array indexing starts from 0.
+    //
+    // Example:
+    // students[0] = First student
+    // students[1] = Second student
+    // students[2] = Third student
+
+    Student[] public students;
+
+
+    // ADD STUDENT FUNCTION:
+    // This function is used to add a new student's details to the array.
+    //
+    // Parameters:
+    // _rollNo = Student's roll number
+    // _name   = Student's name
+    // _age    = Student's age
+    // _marks  = Student's marks
+
+    function addStudent(
+        uint _rollNo,
+        string memory _name,
+        uint _age,
+        uint _marks
+    ) public {
+
+        // push() adds a new element at the end of the array.
+        //
+        // Student(...) creates a new Student structure
+        // using the values provided by the user.
+        //
+        // memory is used because the input string is
+        // temporarily stored while the function executes.
+
+        students.push(
+            Student(_rollNo, _name, _age, _marks)
+        );
+    }
+
+
+    // GET STUDENT FUNCTION:
+    // This function retrieves student details using the array index.
+    //
+    // _index tells us which student's details we want.
+    //
+    // Example:
+    // getStudent(0) gives the first student's details.
+    // getStudent(1) gives the second student's details.
+
+    function getStudent(uint _index)
+        public
+
+        // view means this function only reads blockchain data.
+        // It does not modify or update any stored data.
+
+        view
+
+        // returns specifies the values that this function will return.
+        // It returns roll number, name, age and marks.
+
+        returns (uint, string memory, uint, uint)
+    {
+
+        // Get the student record from the array using the given index.
+        //
+        // Student memory s creates a temporary Student variable
+        // named s and copies the selected student's details into it.
+
+        Student memory s = students[_index];
+
+        // Return all four details of the selected student.
+        //
+        // s.rollNo = Student's roll number
+        // s.name   = Student's name
+        // s.age    = Student's age
+        // s.marks  = Student's marks
+
+        return (s.rollNo, s.name, s.age, s.marks);
+    }
+
+
+    // GET STUDENT COUNT FUNCTION:
+    // This function returns the total number of students in the array.
+
+    function getStudentCount()
+
+        // public means anyone can call this function.
+        public
+
+        // view means it only reads data and does not modify it.
+        view
+
+        // returns (uint) means it returns an unsigned integer.
+        returns (uint)
+    {
+
+        // students.length gives the total number of students.
+        // Example: If 3 students are added, it returns 3.
+
+        return students.length;
+    }
+}

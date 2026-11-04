@@ -1,0 +1,182 @@
+1. Basic Blockchain Concepts
+Q1. What is Blockchain?
+
+Blockchain is a digital distributed ledger that stores data in blocks connected together.
+
+Q2. What is a block?
+
+A block stores transaction data, timestamp, current hash and previous block hash.
+
+Q3. What is a hash?
+
+A hash is a fixed-length value generated from data using a hash function.
+
+Q4. What is decentralization?
+
+It means data is not controlled by a single central authority.
+
+Q5. What are the types of Blockchain?
+- Public
+- Private
+- Consortium
+- Hybrid
+Q6. What is a consensus mechanism?
+
+It is a method used by blockchain participants to agree on valid transactions.
+
+Q7. What are PoW and PoS?
+- PoW: Proof of Work, uses computational power.
+- PoS: Proof of Stake, uses cryptocurrency staking.
+2. Remix IDE
+Q8. What is Remix IDE?
+
+Remix IDE is an online development environment used to write, compile, deploy and test smart contracts.
+
+Q9. Why do we use Remix IDE?
+
+To develop and test Solidity smart contracts easily.
+
+Q10. What is a compiler?
+
+A compiler converts Solidity code into bytecode and generates ABI.
+
+Q11. What is bytecode?
+
+Bytecode is the machine-readable code generated after compiling a smart contract.
+
+Q12. What is ABI?
+
+ABI stands for Application Binary Interface. It helps applications communicate with smart contracts.
+3. MetaMask
+
+
+
+
+
+
+
+
+
+Q13. What is MetaMask?
+
+MetaMask is a cryptocurrency wallet used to manage Ethereum accounts and connect with blockchain applications.
+
+Q14. Why do we use MetaMask?
+
+To create wallets, send and receive ETH, and approve smart contract transactions.
+
+Q15. What is a wallet address?
+
+It is a unique address used to send and receive cryptocurrency.
+
+Q16. What is a private key?
+
+It is a secret key used to sign transactions and control a wallet.
+
+Q17. What is a Secret Recovery Phrase?
+
+It is a set of words used to recover a wallet if access is lost.
+4. Ethereum and Sepolia
+Q18. What is Ethereum?
+
+Ethereum is a blockchain platform that supports smart contracts and cryptocurrency transactions.
+
+Q19. What is Sepolia?
+
+Sepolia is an Ethereum test network used to test smart contracts.
+
+Q20. What is a testnet?
+
+A testnet is a network used for testing blockchain applications without using real money.
+
+Q21. What is a faucet?
+
+A faucet provides free test ETH for testing transactions.
+
+Q22. Difference between Mainnet and Testnet?
+- Mainnet uses real ETH.
+- Testnet uses test ETH, which has no real monetary value.
+5. Smart Contract and Solidity
+Q23. What is a smart contract?
+
+A smart contract is a program stored on a blockchain that executes automatically when conditions are met.
+
+Q24. What is Solidity?
+
+Solidity is a programming language used to write smart contracts.
+
+Q25. What is EVM?
+
+EVM stands for Ethereum Virtual Machine. It executes smart contracts on Ethereum.
+
+Q26. What is gas?
+
+Gas is the fee required to execute transactions and smart contract operations.
+
+Q27. What is a transaction hash?
+
+It is a unique identifier used to track a blockchain transaction.
+
+Q28. What is a block explorer?
+
+It is a website used to check blockchain transactions and blocks. Example: Etherscan.
+6. Important Solidity Keywords
+Q29. What is mapping?
+
+It stores data in key-value pairs.
+
+Q30. What is struct?
+
+It groups multiple variables into one structure.
+
+Q31. What is array?
+
+It stores multiple elements.
+
+Q32. What is public?
+
+It allows external access to a function or variable.
+
+Q33. What is private?
+
+It restricts direct access from outside the contract.
+
+Q34. What is view?
+
+It reads data without modifying contract state.
+
+Q35. What is payable?
+
+It allows a function to receive ETH.
+
+Q36. What is require()?
+
+It checks a condition. If false, the transaction is reverted.
+
+Q37. What is msg.sender?
+
+It gives the address of the caller.
+
+Q38. What is msg.value?
+
+It gives the amount of ETH sent with the transaction, in Wei.
+7. Questions about Your Practical Programs
+Q39. What is the purpose of StudentData?
+
+To add and retrieve student details using a struct and array.
+
+Q40. What is the purpose of BankAccount?
+
+To deposit ETH, withdraw ETH and check user balances.
+
+Q41. Why do we use push()?
+
+To add a new element to an array.
+
+Q42. Why do we use call()?
+
+To transfer ETH to another address or make an external call.
+
+Q43. What is Wei?
+
+Wei is the smallest unit of Ether. 1 ETH = \(10^{18}\) Wei.
